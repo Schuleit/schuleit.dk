@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:grid;gap:30px;padding:30px;font-family:"DM Sans",sans-serif}
+  .cover{width:1128px;height:191px;background:#15201d;position:relative;overflow:hidden;color:#fff}
+  .cover svg.bg{position:absolute;inset:0;width:100%;height:100%}
+  .tag{position:absolute;right:56px;top:50%;transform:translateY(-50%);text-align:right}
+  .tag h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:34px;letter-spacing:-0.02em;margin:0 0 6px;line-height:1}
+  .tag p{margin:0;font-size:16px;color:#9aa8a2}
+  .tag b{color:#4fc39e;font-weight:500}
+
+  /* 1: pipeline — wireframe cube → layered cube → solid cube */
+  .c1 .steps{position:absolute;left:150px;top:0;height:191px;display:flex;align-items:center;gap:34px}
+  .c1 .steps svg{width:110px;height:110px}
+  .c1 .arrow{color:#3b4a45;font-size:26px}
+
+  /* 3: layer lines — a printed contour landscape */
+  /* 4: photo strip */
+  .c4 .strip{position:absolute;left:120px;top:0;height:191px;display:flex}
+  .c4 .strip img{height:191px;width:150px;object-fit:cover;filter:saturate(.85) brightness(.85)}
+  .c4 .fade{position:absolute;left:120px;top:0;width:120px;height:191px;background:linear-gradient(90deg,#15201d,transparent)}
+  .c4 .fade2{position:absolute;left:560px;top:0;width:170px;height:191px;background:linear-gradient(90deg,transparent,#15201d 70%)}
+</style></head><body>
+
+<!-- 1 -->
+<div class="cover c1">
+  <div class="steps">
+    <svg viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="3" stroke-linejoin="round" stroke-dasharray="4 3">
+      <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z M8 28 L50 50 L92 28 M50 50 L50 94 M50 6 L50 52 M50 52 L8 72 M50 52 L92 72"/>
+    </svg>
+    <span class="arrow">→</span>
+    <svg viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z M8 28 L50 50 L92 28 M50 50 L50 94"/>
+      <polygon points="8,60 50,82 50,94 8,72" fill="#0f6e56" stroke="none"/>
+      <polygon points="92,60 50,82 50,94 92,72" fill="#0b4d3c" stroke="none"/>
+      <polygon points="8,48 50,70 50,82 8,60" fill="#0f6e56" stroke="none" opacity=".6"/>
+      <polygon points="92,48 50,70 50,82 92,60" fill="#0b4d3c" stroke="none" opacity=".6"/>
+    </svg>
+    <span class="arrow">→</span>
+    <svg viewBox="0 0 100 100">
+      <polygon points="50,6 92,28 50,50 8,28" fill="#4fc39e"/>
+      <polygon points="8,28 50,50 50,94 8,72" fill="#0f6e56"/>
+      <polygon points="92,28 50,50 50,94 92,72" fill="#0b4d3c"/>
+    </svg>
+  </div>
+  <div class="tag"><h1>Design &amp; Build</h1><p>From a <b>Fusion 360</b> sketch to a finished print.</p></div>
+</div>
+
+<!-- 2: isometric grid of cubes fading right -->
+<div class="cover c2">
+  <svg class="bg" viewBox="0 0 1128 191" preserveAspectRatio="none">
+    <defs>
+      <g id="k"><path d="M0 -12 L21 0 L0 12 L-21 0 Z M-21 0 L0 12 L0 36 L-21 24 Z M21 0 L0 12 L0 36 L21 24 Z" fill="none" stroke="#4fc39e" stroke-width="1.6" stroke-linejoin="round"/></g>
+      <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <mask id="m"><rect width="1128" height="191" fill="url(#fade)"/></mask>
+    </defs>
+    <g mask="url(#m)">
+      <use href="#k" x="60" y="40"/><use href="#k" x="102" y="64"/><use href="#k" x="144" y="40"/><use href="#k" x="186" y="64"/><use href="#k" x="228" y="40"/><use href="#k" x="270" y="64"/><use href="#k" x="312" y="40"/><use href="#k" x="354" y="64"/><use href="#k" x="396" y="40"/><use href="#k" x="438" y="64"/><use href="#k" x="480" y="40"/><use href="#k" x="522" y="64"/><use href="#k" x="564" y="40"/><use href="#k" x="606" y="64"/>
+      <use href="#k" x="60" y="88"/><use href="#k" x="102" y="112"/><use href="#k" x="144" y="88"/><use href="#k" x="186" y="112"/><use href="#k" x="228" y="88"/><use href="#k" x="270" y="112"/><use href="#k" x="312" y="88"/><use href="#k" x="354" y="112"/><use href="#k" x="396" y="88"/><use href="#k" x="438" y="112"/><use href="#k" x="480" y="88"/><use href="#k" x="522" y="112"/><use href="#k" x="564" y="88"/><use href="#k" x="606" y="112"/>
+      <use href="#k" x="60" y="136"/><use href="#k" x="102" y="160"/><use href="#k" x="144" y="136"/><use href="#k" x="186" y="160"/><use href="#k" x="228" y="136"/><use href="#k" x="270" y="160"/><use href="#k" x="312" y="136"/><use href="#k" x="354" y="160"/><use href="#k" x="396" y="136"/><use href="#k" x="438" y="160"/><use href="#k" x="480" y="136"/><use href="#k" x="522" y="160"/><use href="#k" x="564" y="136"/><use href="#k" x="606" y="160"/>
+      <use href="#k" x="60" y="-8"/><use href="#k" x="102" y="16"/><use href="#k" x="144" y="-8"/><use href="#k" x="186" y="16"/><use href="#k" x="228" y="-8"/><use href="#k" x="270" y="16"/><use href="#k" x="312" y="-8"/><use href="#k" x="354" y="16"/><use href="#k" x="396" y="-8"/><use href="#k" x="438" y="16"/><use href="#k" x="480" y="-8"/><use href="#k" x="522" y="16"/><use href="#k" x="564" y="-8"/><use href="#k" x="606" y="16"/>
+    </g>
+    <g><path d="M312 88 m0 -12 L333 88 L312 100 L291 88 Z" fill="#fff"/><path d="M291 88 L312 100 L312 124 L291 112 Z" fill="#d7e2dd"/><path d="M333 88 L312 100 L312 124 L333 112 Z" fill="#aebfb8"/></g>
+  </svg>
+  <div class="tag"><h1>Schuleit Design &amp; Build</h1><p>3D-printed designs and small software tools, from idea to finished thing.</p></div>
+</div>
+
+<!-- 3: layer lines (print contours) -->
+<div class="cover c3">
+  <svg class="bg" viewBox="0 0 1128 191" preserveAspectRatio="none" fill="none" stroke="#4fc39e" stroke-width="1.4">
+    <g opacity=".85">
+      <path d="M0 150 C120 150 180 96 300 96 S480 150 600 150 S780 88 900 88 S1080 130 1128 130"/>
+      <path d="M0 158 C120 158 180 106 300 106 S480 158 600 158 S780 98 900 98 S1080 138 1128 138" opacity=".8"/>
+      <path d="M0 166 C120 166 180 116 300 116 S480 166 600 166 S780 108 900 108 S1080 146 1128 146" opacity=".65"/>
+      <path d="M0 174 C120 174 180 126 300 126 S480 174 600 174 S780 118 900 118 S1080 154 1128 154" opacity=".5"/>
+      <path d="M0 182 C120 182 180 136 300 136 S480 182 600 182 S780 128 900 128 S1080 162 1128 162" opacity=".38"/>
+      <path d="M0 190 C120 190 180 146 300 146 S480 190 600 190 S780 138 900 138 S1080 170 1128 170" opacity=".26"/>
+      <path d="M0 142 C120 142 180 86 300 86 S480 142 600 142 S780 78 900 78 S1080 122 1128 122" opacity=".7"/>
+      <path d="M0 134 C120 134 180 76 300 76 S480 134 600 134 S780 68 900 68 S1080 114 1128 114" opacity=".45"/>
+      <path d="M0 126 C120 126 180 66 300 66 S480 126 600 126 S780 58 900 58 S1080 106 1128 106" opacity=".25"/>
+    </g>
+  </svg>
+  <div class="tag" style="top:34%"><h1>Design &amp; Build</h1><p>Layer by layer. <b>Fusion 360</b> · <b>Bambu Lab P1S</b> · <b>Python</b></p></div>
+</div>
+
+<!-- 4: photo strip of real prints -->
+<div class="cover c4">
+  <div class="strip"><img src="quest-stand.webp"><img src="nail-polish.webp"><img src="zip-tie.webp"><img src="tesla-airpods.webp"></div>
+  <div class="fade"></div><div class="fade2"></div>
+  <div class="tag"><h1>Design &amp; Build</h1><p>20 designs on MakerWorld · 12k+ downloads</p></div>
+</div>
+
+</body></html>

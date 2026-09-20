@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px;font-family:"Bricolage Grotesque",sans-serif}
+  .tile{width:400px;height:400px;background:#15201d;display:grid;place-items:center;overflow:hidden}
+  .row{display:flex;align-items:center}
+  .s{font-weight:800;color:#fff;line-height:1;letter-spacing:-0.04em}
+  .cube{display:block}
+  /* A: solid cube */
+  .a .cube{width:190px;height:190px;margin-right:12px;margin-top:8px}.a .s{font-size:230px}
+  /* B: cube with the @ inside, S */
+  .b .cube{width:200px;height:200px;margin-right:6px;margin-top:8px}.b .s{font-size:230px}
+  /* C: stacked lockup — cube above, S below, both centred */
+  .c .col{display:grid;justify-items:center;gap:0}
+  .c .cube{width:150px;height:150px}.c .s{font-size:190px;margin-top:-18px}
+</style></head><body>
+
+<div class="tile a"><div class="row">
+  <svg class="cube" viewBox="0 0 100 100">
+    <polygon points="50,6 92,28 50,50 8,28" fill="#4fc39e"/>
+    <polygon points="8,28 50,50 50,94 8,72" fill="#0f6e56"/>
+    <polygon points="92,28 50,50 50,94 92,72" fill="#0b4d3c"/>
+  </svg>
+  <span class="s">S</span>
+</div></div>
+
+<div class="tile b"><div class="row">
+  <svg class="cube" viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="7" stroke-linejoin="round">
+    <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z"/>
+    <path d="M8 28 L50 50 L92 28 M50 50 L50 94"/>
+    <text x="29" y="84" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="400" font-size="38" fill="#4fc39e" stroke="none" transform="matrix(1 0.52 0 1 0 -15)">@</text>
+  </svg>
+  <span class="s">S</span>
+</div></div>
+
+<div class="tile c"><div class="col">
+  <svg class="cube" viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="7" stroke-linejoin="round">
+    <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z"/>
+    <path d="M8 28 L50 50 L92 28 M50 50 L50 94"/>
+  </svg>
+  <span class="s">S</span>
+</div></div>
+
+</body></html>

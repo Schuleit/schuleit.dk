@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px;font-family:"Bricolage Grotesque",sans-serif}
+  .tile{width:400px;height:400px;background:#15201d;display:grid;place-items:center;overflow:hidden;position:relative}
+  .tile svg{position:absolute;inset:0;width:100%;height:100%}
+  /* 4: extruded S — a printed letter with depth */
+  .four .s{font-weight:800;font-size:270px;line-height:1;color:#fff;letter-spacing:-0.04em;position:relative;left:-14px;top:-10px;
+    text-shadow:
+      2px 2px 0 #4fc39e, 4px 4px 0 #4fc39e, 6px 6px 0 #4fc39e, 8px 8px 0 #4fc39e, 10px 10px 0 #4fc39e, 12px 12px 0 #4fc39e,
+      14px 14px 0 #0f6e56, 16px 16px 0 #0f6e56, 18px 18px 0 #0f6e56, 20px 20px 0 #0f6e56, 22px 22px 0 #0f6e56, 24px 24px 0 #0f6e56,
+      26px 26px 0 #0b4d3c, 28px 28px 0 #0b4d3c, 30px 30px 0 #0b4d3c, 32px 32px 0 #0b4d3c}
+  .four .at{position:absolute;right:54px;bottom:50px;font-size:78px;color:#4fc39e;font-weight:400;line-height:1}
+  /* 5: layered S — the letter built from print layers */
+  .five .s{font-weight:800;font-size:290px;line-height:1;letter-spacing:-0.04em;position:relative;top:-8px;
+    background:repeating-linear-gradient(to bottom,#4fc39e 0 12px,#15201d 12px 16px);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .five .cube{position:absolute;left:44px;top:44px;width:72px;height:72px}
+  /* 6: solid cube with print layers, S on the front face */
+</style></head><body>
+
+<div class="tile four"><span class="s">S</span><span class="at">@</span></div>
+
+<div class="tile five">
+  <svg class="cube" viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="8" stroke-linejoin="round" style="position:absolute;inset:auto;left:44px;top:44px;width:72px;height:72px">
+    <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z"/><path d="M8 28 L50 50 L92 28 M50 50 L50 94"/>
+  </svg>
+  <span class="s">S</span>
+</div>
+
+<div class="tile six">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <clipPath id="left"><polygon points="12,30 50,52 50,94 12,72"/></clipPath>
+      <clipPath id="right"><polygon points="88,30 50,52 50,94 88,72"/></clipPath>
+    </defs>
+    <polygon points="50,8 88,30 50,52 12,30" fill="#4fc39e"/>
+    <polygon points="12,30 50,52 50,94 12,72" fill="#0f6e56"/>
+    <polygon points="88,30 50,52 50,94 88,72" fill="#0b4d3c"/>
+    <!-- layer lines follow each face's slope -->
+    <g stroke="#15201d" stroke-width="0.9" opacity="0.55" clip-path="url(#left)">
+      <path d="M12 36 L50 58 M12 42 L50 64 M12 48 L50 70 M12 54 L50 76 M12 60 L50 82 M12 66 L50 88 M12 72 L50 94"/>
+    </g>
+    <g stroke="#15201d" stroke-width="0.9" opacity="0.55" clip-path="url(#right)">
+      <path d="M88 36 L50 58 M88 42 L50 64 M88 48 L50 70 M88 54 L50 76 M88 60 L50 82 M88 66 L50 88 M88 72 L50 94"/>
+    </g>
+    <text x="69" y="72" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="44" fill="#fff" transform="matrix(1 -0.58 0 1 0 40)">S</text>
+  </svg>
+</div>
+
+</body></html>

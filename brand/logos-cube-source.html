@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px;font-family:"Bricolage Grotesque",sans-serif}
+  .tile{width:400px;height:400px;background:#15201d;display:grid;place-items:center;overflow:hidden;position:relative}
+  .tile svg{position:absolute;inset:0;width:100%;height:100%}
+  .mono{display:flex;align-items:baseline;line-height:1;letter-spacing:-0.04em;position:relative}
+  .at{font-weight:400;color:#4fc39e;position:relative}
+  .s{font-weight:800;color:#fff}
+  /* 1: cube frame around the monogram */
+  .one .at{font-size:124px;top:-4px;margin-right:-4px}.one .s{font-size:182px}
+  /* 2: solid cube, S on the front face */
+  /* 3: cube takes the place of the @ */
+  .three .s{font-size:230px}
+  .three .cube{width:190px;height:190px;position:static;margin-right:10px;align-self:center;margin-top:10px}
+</style></head><body>
+
+<div class="tile one">
+  <svg viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="3.2" stroke-linejoin="round">
+    <path d="M50 7 L89 29 L89 71 L50 93 L11 71 L11 29 Z"/>
+    <path d="M11 29 L50 51 L89 29"/>
+  </svg>
+  <div class="mono" style="margin-top:56px"><span class="at">@</span><span class="s">S</span></div>
+</div>
+
+<div class="tile two">
+  <svg viewBox="0 0 100 100">
+    <polygon points="50,8 88,30 50,52 12,30" fill="#4fc39e"/>
+    <polygon points="12,30 50,52 50,94 12,72" fill="#0f6e56"/>
+    <polygon points="88,30 50,52 50,94 88,72" fill="#0b4d3c"/>
+    <text x="69" y="72" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="44" fill="#fff" transform="matrix(1 -0.58 0 1 0 40)">S</text>
+    <text x="31" y="70" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="400" font-size="30" fill="#15201d" transform="matrix(1 0.58 0 1 0 -18)">@</text>
+  </svg>
+</div>
+
+<div class="tile three">
+  <div class="mono">
+    <svg class="cube" viewBox="0 0 100 100" fill="none" stroke="#4fc39e" stroke-width="7" stroke-linejoin="round">
+      <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z"/>
+      <path d="M8 28 L50 50 L92 28 M50 50 L50 94"/>
+    </svg>
+    <span class="s">S</span>
+  </div>
+</div>
+
+</body></html>

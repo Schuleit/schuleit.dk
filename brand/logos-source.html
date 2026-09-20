@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px;font-family:"Bricolage Grotesque",sans-serif}
+  .tile{width:400px;height:400px;border-radius:0;display:grid;place-items:center;overflow:hidden}
+  .mono{display:flex;align-items:baseline;line-height:1;letter-spacing:-0.04em}
+  .mono .at{font-weight:400;font-size:170px;margin-right:-6px;position:relative;top:-6px}
+  .mono .s{font-weight:800;font-size:250px}
+  .a{background:#15201d}.a .at{color:#4fc39e}.a .s{color:#fff}
+  .b{background:#0f6e56}.b .at{color:#15201d}.b .s{color:#fff}
+  .c{background:#15201d}.c svg{width:280px;height:280px}
+  .d{background:#f6f8f6}.d .at{color:#0f6e56}.d .s{color:#15201d}
+</style></head><body>
+<div class="tile a"><div class="mono"><span class="at">@</span><span class="s">S</span></div></div>
+<div class="tile b"><div class="mono"><span class="at">@</span><span class="s">S</span></div></div>
+<div class="tile c">
+  <svg viewBox="0 0 100 100" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z" stroke="#4fc39e" stroke-width="5"/>
+    <path d="M8 28 L50 50 L92 28 M50 50 L50 94" stroke="#4fc39e" stroke-width="5"/>
+    <text x="70" y="78" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="30" fill="#fff" transform="skewY(-27.5) translate(0 36)">S</text>
+  </svg>
+</div>
+<div class="tile d"><div class="mono"><span class="at">@</span><span class="s">S</span></div></div>
+</body></html>

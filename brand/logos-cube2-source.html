@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px;font-family:"Bricolage Grotesque",sans-serif}
+  .tile{width:400px;height:400px;background:#15201d;display:grid;place-items:center;overflow:hidden;position:relative}
+  .tile svg{position:absolute;inset:0;width:100%;height:100%}
+</style></head><body>
+
+<!-- 7: voxel cube — 2x2x2 small cubes, one lit white -->
+<div class="tile seven">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <g id="c">
+        <polygon points="0,-11.5 20,0 0,11.5 -20,0" fill="#4fc39e"/>
+        <polygon points="-20,0 0,11.5 0,34.5 -20,23" fill="#0f6e56"/>
+        <polygon points="20,0 0,11.5 0,34.5 20,23" fill="#0b4d3c"/>
+      </g>
+      <g id="w">
+        <polygon points="0,-11.5 20,0 0,11.5 -20,0" fill="#ffffff"/>
+        <polygon points="-20,0 0,11.5 0,34.5 -20,23" fill="#d7e2dd"/>
+        <polygon points="20,0 0,11.5 0,34.5 20,23" fill="#aebfb8"/>
+      </g>
+    </defs>
+    <!-- back row, bottom layer -->
+    <use href="#c" x="50" y="31"/>
+    <!-- bottom layer, middle -->
+    <use href="#c" x="30" y="42.5"/><use href="#c" x="70" y="42.5"/>
+    <use href="#c" x="50" y="54"/>
+    <!-- top layer -->
+    <use href="#c" x="50" y="8"/>
+    <use href="#c" x="30" y="19.5"/><use href="#w" x="70" y="19.5"/>
+    <use href="#c" x="50" y="31"/>
+  </svg>
+</div>
+
+<!-- 8: open box — lid up, S rising out -->
+<div class="tile eight">
+  <svg viewBox="0 0 100 100" stroke-linejoin="round">
+    <!-- back walls -->
+    <polygon points="14,38 50,20 86,38 50,56" fill="#0b4d3c"/>
+    <!-- letter inside -->
+    <text x="50" y="62" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="46" fill="#fff">S</text>
+    <!-- front walls -->
+    <polygon points="14,38 50,56 50,90 14,72" fill="#0f6e56"/>
+    <polygon points="86,38 50,56 50,90 86,72" fill="#0b4d3c"/>
+    <!-- open lid, hinged on the back-right edge -->
+    <polygon points="86,38 50,20 62,4 98,22" fill="#4fc39e"/>
+    <!-- @ on the front face -->
+    <text x="31" y="71" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="400" font-size="16" fill="#15201d" transform="matrix(1 0.5 0 1 0 -12)">@</text>
+  </svg>
+</div>
+
+<!-- 9: CAD wireframe — cube with vertex nodes and a hidden edge dashed, S centred -->
+<div class="tile nine">
+  <svg viewBox="0 0 100 100" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <g stroke="#4fc39e" stroke-width="2.2">
+      <path d="M50 8 L90 28 L90 72 L50 92 L10 72 L10 28 Z"/>
+      <path d="M10 28 L50 48 L90 28 M50 48 L50 92"/>
+      <path d="M50 8 L50 52 M50 52 L10 72 M50 52 L90 72" stroke-dasharray="3 3" opacity="0.55"/>
+    </g>
+    <g fill="#15201d" stroke="#4fc39e" stroke-width="2.2">
+      <circle cx="50" cy="8" r="3"/><circle cx="90" cy="28" r="3"/><circle cx="90" cy="72" r="3"/><circle cx="50" cy="92" r="3"/>
+      <circle cx="10" cy="72" r="3"/><circle cx="10" cy="28" r="3"/><circle cx="50" cy="48" r="3"/><circle cx="50" cy="52" r="3" opacity="0.55"/>
+    </g>
+    <text x="50" y="80" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="38" fill="#fff" stroke="none">S</text>
+  </svg>
+</div>
+
+</body></html>

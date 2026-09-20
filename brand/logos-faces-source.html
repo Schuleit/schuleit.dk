@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#fff;display:flex;gap:40px;padding:40px}
+  .tile{width:400px;height:400px;background:#15201d;display:grid;place-items:center;overflow:hidden}
+  .tile svg{width:340px;height:340px}
+  text{font-family:"Bricolage Grotesque",sans-serif}
+</style></head><body>
+
+<!-- 1: wireframe, letters projected onto the faces -->
+<div class="tile"><svg viewBox="0 0 100 100" fill="none" stroke-linejoin="round">
+  <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z" stroke="#4fc39e" stroke-width="6"/>
+  <path d="M8 28 L50 50 L92 28 M50 50 L50 94" stroke="#4fc39e" stroke-width="6"/>
+  <!-- left face: x 8..50, slope +0.52 -->
+  <text x="29" y="79" text-anchor="middle" font-weight="400" font-size="34" fill="#4fc39e" transform="matrix(1 0.524 0 1 0 -15.2)">@</text>
+  <!-- right face: x 50..92, slope -0.52 -->
+  <text x="71" y="80" text-anchor="middle" font-weight="800" font-size="38" fill="#fff" transform="matrix(1 -0.524 0 1 0 37.2)">S</text>
+</svg></div>
+
+<!-- 2: solid faces, letters projected -->
+<div class="tile"><svg viewBox="0 0 100 100" stroke-linejoin="round">
+  <polygon points="50,6 92,28 50,50 8,28" fill="#4fc39e"/>
+  <polygon points="8,28 50,50 50,94 8,72" fill="#0f6e56"/>
+  <polygon points="92,28 50,50 50,94 92,72" fill="#0b4d3c"/>
+  <text x="29" y="79" text-anchor="middle" font-weight="400" font-size="34" fill="#15201d" transform="matrix(1 0.524 0 1 0 -15.2)">@</text>
+  <text x="71" y="80" text-anchor="middle" font-weight="800" font-size="38" fill="#fff" transform="matrix(1 -0.524 0 1 0 37.2)">S</text>
+</svg></div>
+
+<!-- 3: wireframe, letters upright (not projected), sitting in each face -->
+<div class="tile"><svg viewBox="0 0 100 100" fill="none" stroke-linejoin="round">
+  <path d="M50 6 L92 28 L92 72 L50 94 L8 72 L8 28 Z" stroke="#4fc39e" stroke-width="6"/>
+  <path d="M8 28 L50 50 L92 28 M50 50 L50 94" stroke="#4fc39e" stroke-width="6"/>
+  <text x="29" y="77" text-anchor="middle" font-weight="400" font-size="32" fill="#4fc39e">@</text>
+  <text x="71" y="78" text-anchor="middle" font-weight="800" font-size="36" fill="#fff">S</text>
+</svg></div>
+
+</body></html>
