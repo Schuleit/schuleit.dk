@@ -55,6 +55,34 @@
     }
 
     /* ---- Header ---- */
+    header {
+      position: relative;
+      padding-block: 28px 24px;
+      min-height: 236px;
+      display: grid;
+      align-content: center;
+    }
+    header > * { position: relative; }
+    .grid-bg {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 62%;
+      height: 100%;
+      pointer-events: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%, #000 100%);
+              mask-image: linear-gradient(90deg, transparent 0%, #000 45%, #000 100%);
+    }
+    .grid-bg svg { width: 100%; height: 100%; display: block; }
+    .grid-bg .cubes { stroke: var(--accent); stroke-width: 1.4; fill: none; opacity: .75; }
+    .grid-bg .lit-top { fill: var(--ink); }
+    .grid-bg .lit-l { fill: var(--ink); opacity: .78; }
+    .grid-bg .lit-r { fill: var(--ink); opacity: .55; }
+    @media (max-width: 640px) {
+      header { min-height: 0; padding-block: 150px 8px; }
+      .grid-bg { width: 100%; height: 150px; inset: 0 0 auto 0;
+        -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+                mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%); }
+    }
     header h1 {
       font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
       font-weight: 700;
@@ -337,6 +365,24 @@
   <div class="wrap">
 
     <header>
+      <div class="grid-bg" aria-hidden="true">
+        <svg viewBox="0 0 700 236" preserveAspectRatio="xMaxYMid slice">
+          <defs>
+            <pattern id="cubes" width="84" height="48" patternUnits="userSpaceOnUse">
+              <path class="cubes" d="M21 0 L42 12 L21 24 L0 12 Z M0 12 L21 24 L21 48 L0 36 Z M42 12 L21 24 L21 48 L42 36 Z"/>
+              <path class="cubes" d="M63 24 L84 36 L63 48 L42 36 Z M42 36 L63 48 L63 72 L42 60 Z M84 36 L63 48 L63 72 L84 60 Z"/>
+              <path class="cubes" d="M63 -24 L84 -12 L63 0 L42 -12 Z M42 -12 L63 0 L63 24 L42 12 Z M84 -12 L63 0 L63 24 L84 12 Z"/>
+            </pattern>
+          </defs>
+          <rect width="700" height="236" fill="url(#cubes)"/>
+          <!-- the one lit cube -->
+          <g transform="translate(441 108)">
+            <path class="lit-top" d="M21 0 L42 12 L21 24 L0 12 Z"/>
+            <path class="lit-l" d="M0 12 L21 24 L21 48 L0 36 Z"/>
+            <path class="lit-r" d="M42 12 L21 24 L21 48 L42 36 Z"/>
+          </g>
+        </svg>
+      </div>
       <h1>@Schuleit</h1>
       <p>Tech professional, innovator and IoT enthusiast. I design 3D-printable things and small tools to solve everyday problems, then share them here.</p>
     </header>
