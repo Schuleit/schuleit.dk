@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@Schuleit</title>
+  <title>@Schuleit · Design &amp; Build</title>
   <meta name="description" content="Alex Schuleit — apps and 3D-printable designs. Tech professional, innovator and IoT enthusiast.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,12 +92,22 @@
       margin: 0 0 18px;
       text-wrap: balance;
     }
+    header h1 .sub {
+      display: block;
+      font-weight: 500;
+      font-size: 0.5em;
+      letter-spacing: 0;
+      color: var(--accent);
+      margin-top: 8px;
+    }
     header p {
       margin: 0;
       max-width: 34em;
       color: var(--muted);
       font-size: 1.1rem;
     }
+    header .lead { color: var(--ink); font-size: 1.2rem; margin-bottom: 8px; }
+    header .bio { font-size: 1rem; }
 
     /* ---- Sections ---- */
     section { margin-top: 64px; }
@@ -383,8 +393,9 @@
           </g>
         </svg>
       </div>
-      <h1>@Schuleit</h1>
-      <p>Tech professional, innovator and IoT enthusiast. I design 3D-printable things and small tools to solve everyday problems, then share them here.</p>
+      <h1>@Schuleit <span class="sub">Design &amp; Build</span></h1>
+      <p class="lead">3D-printed designs and small software tools, from idea to finished thing.</p>
+      <p class="bio">Tech professional, innovator and IoT enthusiast. I make things to solve everyday problems, then share them here.</p>
     </header>
 
     <section>
